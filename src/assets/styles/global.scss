@@ -1,0 +1,29 @@
+@import 'reset.scss';
+@import 'fonts.scss';
+body{
+  font-family: 'Muller';
+}
+.quest{
+  margin-bottom: 2rem;
+  .quest__question{
+    font-weight: 500;
+    margin-bottom:0.2rem;
+    line-height: 1.5rem;
+  }
+  .quest__clarification{
+    font-weight: 300;
+    font-style: italic;
+    margin-top: 0;
+  }
+  .quest__input_container{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+}
+label{
+  line-height: 1.2;
+}
+strong{
+  display: contents;
+}
