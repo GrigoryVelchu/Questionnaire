@@ -2,7 +2,7 @@
     <div class="quest">
         <p class="quest__question">{{quest.question}}</p>
         <p class="quest__clarification">(пожалуйста, укажите один вариант ответа)</p>
-        <select required :value="modelValue" @change="$emit('update:modelValue', $event.target.value)">
+        <select :required="required" :value="modelValue" @change="$emit('update:modelValue', $event.target.value)">
             <option value="" selected disabled>-Выберете-</option>
             <option v-for="option in quest.options" :value="option" :key="option">{{option}}</option>
         </select>
@@ -12,7 +12,12 @@
 <script>
   export default {
     name: "q-select",
-    props: ['quest', 'modelValue']
+    props: ['quest', 'modelValue'],
+    data(){
+      return{
+        required:false
+      }
+    }
   }
 </script>
 

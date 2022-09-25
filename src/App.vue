@@ -1,9 +1,11 @@
 <template>
-  <div class = 'container'>
+  <div class='container'>
     <p class="head_info">
       Управление экономического развития Липецкой области проводит опрос мнения
-      предпринимателей о состоянии и развитии конкурентной среды и уровне административных барьеров на региональных и (или) муниципальных рынках
-      Липецкой области в соответствии с распоряжением Правительства Российской Федерации<br/> от 17 апреля 2019 г. № 768-р.
+      предпринимателей о состоянии и развитии конкурентной среды и уровне административных барьеров на региональных и
+      (или) муниципальных рынках
+      Липецкой области в соответствии с распоряжением Правительства Российской Федерации<br/> от 17 апреля 2019 г. №
+      768-р.
     </p>
     <p class="head_info">
       Пожалуйста, ответьте на ряд вопросов, посвященных Вашей оценке состояния
@@ -11,77 +13,61 @@
       Заполнение анкеты займет у Вас около 10-15 минут.
     </p>
     <p class="head_info">
-      Опрос является анонимным и строго конфиденциальным. Все полученные результаты будут использоваться только в обобщенном виде.
+      Опрос является анонимным и строго конфиденциальным. Все полученные результаты будут использоваться только в
+      обобщенном виде.
     </p>
     <p class="head_info">
       Заранее благодарим за участие в исследовании!
     </p>
     <h1>АНКЕТА<br/>для предпринимателя</h1>
-    <form @submit.prevent="makeQuestionnaire">
-      <h2>I. ХАРАКТЕРИСТИКА БИЗНЕСА</h2>
-      <q-select v-model="questions.regions.currentValue" :quest="questions.regions" :currentQuest="'regions'"/>
-      <q-radio v-model="questions.status.currentValue" :quest="questions.status" :currentQuest="'status'"/>
-      <q-radio v-model="questions.businessPeriod.currentValue" :quest="questions.businessPeriod" :currentQuest="'businessPeriod'"/>
-      <q-checkbox :quest="questions.jobTitles" :currentQuest="'jobTitles'" @checkboxHandler="checkboxHandler"/>
-      <q-radio v-model="questions.workersCount.currentValue" :quest="questions.workersCount" :currentQuest="'workersCount'"/>
-      <q-radio v-model="questions.turnover.currentValue" :quest="questions.turnover" :currentQuest="'turnover'"/>
-      <q-select v-model="questions.businessArea.currentValue" :quest="questions.businessArea" :currentQuest="'businessArea'" />
-      <q-radio v-model="questions.mainProduct.currentValue" :quest="questions.mainProduct" :currentQuest="'mainProduct'" />
-      <q-radio v-model="questions.marketGeography.currentValue" :quest="questions.marketGeography" :currentQuest="'marketGeography'" />
-      <h2>II. ОЦЕНКА СОСТОЯНИЯ КОНКУРЕНЦИИ И КОНКУРЕНТНОЙ СРЕДЫ</h2>
-      <q-table-radio :quest="questions.industryCompetitionLevel" :currentQuest="'industryCompetitionLevel'" @checkboxHandler="checkboxHandler"/>
-      <q-radio v-model="questions.businessConditions.currentValue" :quest="questions.businessConditions" :currentQuest="'businessConditions'" />
-      <q-radio v-model="questions.ownBusinessCondition.currentValue" :htmlFormat="true" :quest="questions.ownBusinessCondition" :currentQuest="'ownBusinessCondition'"/>
-      <q-radio v-model="questions.countCompetitors.currentValue" :quest="questions.countCompetitors" :currentQuest="'countCompetitors'"/>
-      <q-radio v-model="questions.changingCompetitors.currentValue" :quest="questions.changingCompetitors" :currentQuest="'changingCompetitors'"/>
-      <q-table-radio :quest="questions.numbersOfSuppliers" :currentQuest="'numbersOfSuppliers'" @checkboxHandler="checkboxHandler"/>
-      <h2>III. ОЦЕНКА ОБЩИХ УСЛОВИЙ ВЕДЕНИЯ ПРЕДПРИНИМАТЕЛЬСКОЙ ДЕЯТЕЛЬНОСТИ</h2>
-      <q-radio v-model="questions.changingConditionsFromLastYear.currentValue" :quest="questions.changingConditionsFromLastYear" :currentQuest="'changingConditionsFromLastYear'"/>
-      <q-checkbox :quest="questions.measuresToIncrease" :currentQuest="'measuresToIncrease'" @checkboxHandler="checkboxHandler"/>
-      <q-checkbox :quest="questions.improvementFactors" :currentQuest="'improvementFactors'" @checkboxHandler="checkboxHandler"/>
-      <q-checkbox :quest="questions.deteriorationFactors" :currentQuest="'deteriorationFactors'" @checkboxHandler="checkboxHandler"/>
-      <q-radio v-model="questions.wasSupport.currentValue" :quest="questions.wasSupport" :currentQuest="'wasSupport'"/>
-      <q-radio v-model="questions.necessaryGovSupport.currentValue" :quest="questions.necessaryGovSupport" :currentQuest="'necessaryGovSupport'"/>
-      <q-radio v-model="questions.typesOfFinancialSupport.currentValue" :quest="questions.typesOfFinancialSupport" :currentQuest="'typesOfFinancialSupport'"/>
-      <q-radio v-model="questions.planningGovSupport.currentValue" :quest="questions.planningGovSupport" :currentQuest="'planningGovSupport'"/>
-      <q-radio v-model="questions.downsizing.currentValue" :quest="questions.downsizing" :currentQuest="'downsizing'"/>
-      <q-radio v-model="questions.salaryСut.currentValue" :quest="questions.salaryСut" :currentQuest="'salaryСut'"/>
-      <q-radio v-model="questions.typesOfLosses.currentValue" :quest="questions.typesOfLosses" :currentQuest="'typesOfLosses'"/>
-      <q-checkbox :quest="questions.sourcesOfInformation" :currentQuest="'sourcesOfInformation'" @checkboxHandler="checkboxHandler" />
-      <q-radio v-model="questions.appealMyBusiness.currentValue" :quest="questions.appealMyBusiness" :currentQuest="'appealMyBusiness'"/>
-      <q-radio v-model="questions.memberOfBusinessAssociation.currentValue" :quest="questions.memberOfBusinessAssociation" :currentQuest="'memberOfBusinessAssociation'" />
-      <q-text-input v-model="questions.ownOpinionAboutSupport.currentValue" :quest="questions.ownOpinionAboutSupport"/>
-      <h2 class = "thanks">БЛАГОДАРИМ ВАС ЗА УЧАСТИЕ В ОПРОСЕ!</h2>
+    <transition-group name="list" tag="div">
+    <form key="1" ref="formStart" class="list-item" @submit.prevent="paginateBlock" v-if="currentBlock===1">
+      <quest-block
+          :blockTitle="'I. ХАРАКТЕРИСТИКА БИЗНЕСА'"
+          :partOfQuest="getPartOfQuestions(1,9)"
+          @checkboxHandler="checkboxHandler"/>
+      <input type="submit" value="Следующий Блок" class="paginateButton"/>
+    </form>
+
+    <form key="2" ref="formStart" class="list-item" @submit.prevent="paginateBlock" v-else-if="currentBlock===2">
+      <quest-block
+          :blockTitle="'II. ОЦЕНКА СОСТОЯНИЯ КОНКУРЕНЦИИ И КОНКУРЕНТНОЙ СРЕДЫ'"
+          :partOfQuest="getPartOfQuestions(10,15)"
+          @checkboxHandler="checkboxHandler"/>
+      <input type="submit" value="Следующий Блок" class="paginateButton"/>
+    </form>
+
+    <form key="3" ref="formStart" class="list-item" @submit.prevent = "makeQuestionnaire" v-else-if="currentBlock===3">
+      <quest-block
+          :blockTitle="'III. ОЦЕНКА ОБЩИХ УСЛОВИЙ ВЕДЕНИЯ ПРЕДПРИНИМАТЕЛЬСКОЙ ДЕЯТЕЛЬНОСТИ'"
+          :partOfQuest="getPartOfQuestions(16,30)"
+          @checkboxHandler="checkboxHandler"/>
+      <h2 class="thanks">БЛАГОДАРИМ ВАС ЗА УЧАСТИЕ В ОПРОСЕ!</h2>
       <input type="submit">
     </form>
+    </transition-group>
   </div>
 </template>
 
 <script>
+import QuestBlock from "@/components/quest-block";
 
-
-import QSelect from "@/components/q-select";
-import QRadio from "@/components/q-radio";
-import QCheckbox from "@/components/q-checkbox";
-import QTableRadio from "@/components/q-table-radio";
-import QTextInput from "@/components/q-text-input";
 export default {
   name: 'App',
   components: {
-    QTextInput,
-    QTableRadio,
-    QCheckbox,
-    QRadio,
-    QSelect
+    QuestBlock,
   },
-  data(){
-    return{
-      result:[],
-      questions:{
-        regions:{
-          currentValue:'',
-          question:'1. На территории какого города (района) Липецкой области осуществляет свою деятельность Ваша организация или Вы?',
-          options:[
+  data() {
+    return {
+      result: [],
+      currentBlock: 1,
+      questions: {
+        regions: {
+          currentValue: '',
+          type: 'select',
+          currentQuest: 'regions',
+          question: '1. На территории какого города (района) Липецкой области осуществляет свою деятельность Ваша организация или Вы?',
+          options: [
             "г. Липецк",
             "г. Елец",
             "Воловский район",
@@ -104,59 +90,71 @@ export default {
             "Чаплыгинский район"
           ]
         },
-        status:{
+        status: {
           currentValue: '',
-          question:'2. Укажите, являетесь ли Вы юридическим лицом или имеете статус индивидуального предпринимателя?',
-          options:[
+          type: 'radio',
+          currentQuest: 'status',
+          question: '2. Укажите, являетесь ли Вы юридическим лицом или имеете статус индивидуального предпринимателя?',
+          options: [
             'Юридическое лицо',
             'Индивидуальный предприниматель'
           ]
         },
-        businessPeriod:{
-          currentValue:'',
-          question:'3. В течение какого периода времени Ваш бизнес осуществляет свою деятельность?',
-          options:[
-                  'Менее 1 года',
-                  'От 1 года до 3 лет',
-                  'От 3 лет включительно до 5 лет',
-                  'Более 5 лет'
+        businessPeriod: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'businessPeriod',
+          question: '3. В течение какого периода времени Ваш бизнес осуществляет свою деятельность?',
+          options: [
+            'Менее 1 года',
+            'От 1 года до 3 лет',
+            'От 3 лет включительно до 5 лет',
+            'Более 5 лет'
           ]
         },
-        jobTitles:{
-          currentValue:[],
-          question:'4. Какую должность Вы занимаете в организации, которую Вы представляете?',
-          options:[
+        jobTitles: {
+          currentValue: [],
+          type: 'checkbox',
+          currentQuest: 'jobTitles',
+          question: '4. Какую должность Вы занимаете в организации, которую Вы представляете?',
+          options: [
             'Собственник бизнеса (совладелец)',
             'Руководитель высшего звена (генеральный директор, заместитель генерального директора или иная аналогичная позиция)',
             'Руководитель среднего звена (руководитель управления / подразделения / отдела)',
             'Не руководящий сотрудник'
           ],
         },
-        workersCount:{
-          currentValue:'',
-          question:'5. Какова численность сотрудников Вашей организации в настоящее время?',
-          options:[
-                  'До 15 человек',
-                  'От 16 до 100 человек',
-                  'От 101 до 250 человек',
-                  'От 251 до 1000 человек',
-                  'Свыше 1000 человек'
+        workersCount: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'workersCount',
+          question: '5. Какова численность сотрудников Вашей организации в настоящее время?',
+          options: [
+            'До 15 человек',
+            'От 16 до 100 человек',
+            'От 101 до 250 человек',
+            'От 251 до 1000 человек',
+            'Свыше 1000 человек'
           ]
         },
-        turnover:{
-          currentValue:'',
-          question:'6. Какова примерная величина годового оборота бизнеса, который Вы представляете?',
-          options:[
+        turnover: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'turnover',
+          question: '6. Какова примерная величина годового оборота бизнеса, который Вы представляете?',
+          options: [
             'До 120 млн. рублей (микропредприятие)',
             'От 120 до 800 млн. рублей (малое предприятие)',
             'От 800 до 2000 млн. рублей (среднее предприятие)',
             'Более 2000 млн. рублей',
           ]
         },
-        businessArea:{
-          currentValue:'',
-          question:'7. К какой сфере относится деятельность бизнеса, который Вы представляете?',
-          options:[
+        businessArea: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'businessArea',
+          question: '7. К какой сфере относится деятельность бизнеса, который Вы представляете?',
+          options: [
             "Дошкольное образование",
             "Общее образование",
             "Cреднее профессиональное образование",
@@ -204,10 +202,12 @@ export default {
             "Другое"
           ]
         },
-        mainProduct:{
-          currentValue:'',
-          question:'8. Основной продукцией (товаром, работой, услугой) бизнеса, который Вы представляете, является?',
-          options:[
+        mainProduct: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'mainProduct',
+          question: '8. Основной продукцией (товаром, работой, услугой) бизнеса, который Вы представляете, является?',
+          options: [
             "Услуги",
             "Сырье или материалы для дальнейшей переработки",
             "Компоненты для производства конечной продукции",
@@ -216,10 +216,12 @@ export default {
             "Другое"
           ]
         },
-        marketGeography:{
-          currentValue:'',
-          question:'9. Какой географический рынок (рынки) является основным* для бизнеса, который Вы представляете?',
-          options:[
+        marketGeography: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'marketGeography',
+          question: '9. Какой географический рынок (рынки) является основным* для бизнеса, который Вы представляете?',
+          options: [
             "Локальный рынок (одно муниципальное образование)",
             "Рынок Липецкой области",
             "Рынки нескольких субъектов Российской Федерации",
@@ -229,10 +231,12 @@ export default {
             "Затрудняюсь ответить"
           ]
         },
-        industryCompetitionLevel:{
-          currentValue:{},
-          question:'10. Оцените уровень конкуренции в представленных сферах на территории Липецкой области?',
-          types:[
+        industryCompetitionLevel: {
+          currentValue: {},
+          type: 'table-radio',
+          currentQuest: 'industryCompetitionLevel',
+          question: '10. Оцените уровень конкуренции в представленных сферах на территории Липецкой области?',
+          types: [
             "Дошкольное образование",
             "Общее образование",
             "Cреднее профессиональное образование",
@@ -270,7 +274,7 @@ export default {
             "Реализация сельскохозяйственной продукции",
             "Финансовые услуги",
           ],
-          values:[
+          values: [
             "Нет конкуренции",
             "Слабая конкуренция",
             "Умеренная конкуренция",
@@ -278,20 +282,25 @@ export default {
             "Затрудняюсь ответить",
           ]
         },
-        businessConditions:{
-          currentValue:'',
-          question:'11. Оцените общие условия ведения бизнеса в Липецкой области?',
-          options:[
+        businessConditions: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'businessConditions',
+          question: '11. Оцените общие условия ведения бизнеса в Липецкой области?',
+          options: [
             "Хорошие",
             "Удовлетворительные",
             "Не удовлетворительные",
             "Затрудняюсь ответить"
           ]
         },
-        ownBusinessCondition:{
-          currentValue:'',
-          question:'12. Выберите утверждение, наиболее точно характеризующее условия ведения бизнеса, который Вы представляете?',
-          options:[
+        ownBusinessCondition: {
+          currentValue: '',
+          type: 'radio',
+          htmlFormat: true,
+          currentQuest: 'ownBusinessCondition',
+          question: '12. Выберите утверждение, наиболее точно характеризующее условия ведения бизнеса, который Вы представляете?',
+          options: [
             "<strong>нет конкуренции</strong> (для сохранения рыночной позиции нашего бизнеса нет необходимости реализовывать какие-либо меры по повышению конкурентоспособности нашей продукции, работ, услуг (снижение цен, повышение качества, развитие сопутствующих услуг, иное))",
             "<strong>слабая конкуренция</strong> (для сохранения рыночной позиции нашего бизнеса время от времени (раз в 2-3 года) может потребоваться реализация мер по повышению конкурентоспособности нашей продукции, работ, услуг (снижение цен, повышение качества, развитие сопутствующих услуг, иное))",
             "<strong>умеренная конкуренция</strong> (для сохранения рыночной позиции нашего бизнеса необходимо регулярно (раз в год или чаще) предпринимать меры по повышению конкурентоспособности нашей продукции, работ, услуг (снижение цен, повышение качества, развитие сопутствующих услуг, иное))",
@@ -300,10 +309,12 @@ export default {
             "<strong>Затрудняюсь ответить</strong>"
           ]
         },
-        countCompetitors:{
-          currentValue:'',
-          question:'13. Оцените примерное количество конкурентов Вашего бизнеса?',
-          options:[
+        countCompetitors: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'countCompetitors',
+          question: '13. Оцените примерное количество конкурентов Вашего бизнеса?',
+          options: [
             "Нет конкурентов",
             "От 1 до 3 конкурентов",
             "От 4 до 8 конкурентов",
@@ -311,10 +322,12 @@ export default {
             "Затрудняюсь ответить",
           ]
         },
-        changingCompetitors:{
-          currentValue:'',
-          question:'14. Как изменилось число конкурентов бизнеса, который Вы представляете, на основном рынке товаров, работ, услуг за последние 3 года? ',
-          options:[
+        changingCompetitors: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'changingCompetitors',
+          question: '14. Как изменилось число конкурентов бизнеса, который Вы представляете, на основном рынке товаров, работ, услуг за последние 3 года? ',
+          options: [
             "Увеличилось на 1-3 конкурента",
             "Увеличилось более чем на 4 конкурента",
             "Сократилось на 1-3 конкурента",
@@ -323,35 +336,41 @@ export default {
             "Затрудняюсь ответить",
           ]
         },
-        numbersOfSuppliers:{
-          currentValue:{},
-          question:'15. Оцените примерное число поставщиков основного закупаемого товара (работы, услуги), который приобретает представляемый Вами бизнес для производства и реализации собственной продукции/оказания услуг, а также Вашу удовлетворенность состоянием конкуренции между поставщиками этого товара, работы, услуги ',
-          values:[
+        numbersOfSuppliers: {
+          currentValue: {},
+          type: 'table-radio',
+          currentQuest: 'numbersOfSuppliers',
+          question: '15. Оцените примерное число поставщиков основного закупаемого товара (работы, услуги), который приобретает представляемый Вами бизнес для производства и реализации собственной продукции/оказания услуг, а также Вашу удовлетворенность состоянием конкуренции между поставщиками этого товара, работы, услуги ',
+          values: [
             "Единственный/ Неудовлетворительное",
             "2-3 поставщика/Скорее неудовлетворительное",
             "4 и более поставщика/Скорее удовлетворительное",
             "Большое число поставщиков/Удовлетворительное",
             "Затрудняюсь ответить"
           ],
-          types:[
+          types: [
             "Число поставщиков основного закупаемого товара (работы, услуги)",
             "Удовлетворенность состоянием конкуренции между поставщиками основного закупаемого товара (работы, услуги)"
           ]
         },
-        changingConditionsFromLastYear:{
-          currentValue:'',
-          question:'16. Как изменились условия ведения Вашего бизнеса в текущем году по сравнению с предыдущим?',
-          options:[
+        changingConditionsFromLastYear: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'changingConditionsFromLastYear',
+          question: '16. Как изменились условия ведения Вашего бизнеса в текущем году по сравнению с предыдущим?',
+          options: [
             "Улучшились",
             "Не изменились",
             "Ухудшились",
             "Затрудняюсь ответить",
           ]
         },
-        measuresToIncrease:{
-          currentValue:[],
-          question:'17. Укажите, какие меры по повышению конкурентоспособности продукции, работ, услуг, которые производит или представляет Ваш бизнес, Вы предпринимали за последние 3 года?',
-          options:[
+        measuresToIncrease: {
+          currentValue: [],
+          type: 'checkbox',
+          currentQuest: 'measuresToIncrease',
+          question: '17. Укажите, какие меры по повышению конкурентоспособности продукции, работ, услуг, которые производит или представляет Ваш бизнес, Вы предпринимали за последние 3 года?',
+          options: [
             "Обучение и переподготовка персонала",
             "Новые способы продвижения продукции (маркетинговые стратегии)",
             "Приобретение технического оборудования",
@@ -363,10 +382,12 @@ export default {
             "Другое"
           ]
         },
-        improvementFactors:{
-          currentValue:[],
-          question:'18. Укажите факторы улучшения условий ведения бизнеса за последние 3 года?',
-          options:[
+        improvementFactors: {
+          currentValue: [],
+          type: 'checkbox',
+          currentQuest: 'improvementFactors',
+          question: '18. Укажите факторы улучшения условий ведения бизнеса за последние 3 года?',
+          options: [
             "Повысился спрос на товары, услуги, поставляемые компанией",
             "Расширилась география рынков сбыта",
             "Сократились издержки",
@@ -376,10 +397,12 @@ export default {
             "Другое"
           ]
         },
-        deteriorationFactors:{
-          currentValue:[],
-          question:'19. Укажите факторы ухудшения условий ведения бизнеса за последние 3 года?',
-          options:[
+        deteriorationFactors: {
+          currentValue: [],
+          type: 'checkbox',
+          currentQuest: 'deteriorationFactors',
+          question: '19. Укажите факторы ухудшения условий ведения бизнеса за последние 3 года?',
+          options: [
             "Снизился спрос на товары, услуги",
             "Возросли издержки и работать стало невыгодно",
             "Пришлось снизить стоимость продукции, услуг",
@@ -393,18 +416,22 @@ export default {
             "Другое"
           ]
         },
-        wasSupport:{
-          currentValue:'',
-          question:'20. Получала ли Ваша компания в текущем году государственную поддержку (в виде субсидий, погашению % ставки по кредитам, поручительству по кредитам и т.д.)?',
-          options:[
+        wasSupport: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'wasSupport',
+          question: '20. Получала ли Ваша компания в текущем году государственную поддержку (в виде субсидий, погашению % ставки по кредитам, поручительству по кредитам и т.д.)?',
+          options: [
             "Да",
             "Нет"
           ]
         },
-        necessaryGovSupport:{
-          currentValue:'',
-          question:'21. Какая форма государственной поддержки Вам наиболее необходима?',
-          options:[
+        necessaryGovSupport: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'necessaryGovSupport',
+          question: '21. Какая форма государственной поддержки Вам наиболее необходима?',
+          options: [
             "Финансовая поддержка",
             "Имущественная поддержка",
             "Консультационная поддержка",
@@ -413,10 +440,12 @@ export default {
             "Другое",
           ]
         },
-        typesOfFinancialSupport:{
-          currentValue:'',
-          question:'22. Какие виды финансовой поддержки Вам наиболее интересны?',
-          options:[
+        typesOfFinancialSupport: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'typesOfFinancialSupport',
+          question: '22. Какие виды финансовой поддержки Вам наиболее интересны?',
+          options: [
             "Грантовая поддержка",
             "Субсидиарная поддержка",
             "Льготные микрозаймы, кредиты",
@@ -426,18 +455,22 @@ export default {
             "Другое"
           ]
         },
-        planningGovSupport:{
-         currentValue:'',
-         question:'23. Планируете ли Вы в следующем году обратиться за государственной поддержкой?',
-         options:[
-           "Да",
-           "Нет"
-         ]
+        planningGovSupport: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'planningGovSupport',
+          question: '23. Планируете ли Вы в следующем году обратиться за государственной поддержкой?',
+          options: [
+            "Да",
+            "Нет"
+          ]
         },
-        downsizing:{
-          currentValue:'',
-          question:'24. Пришлось ли Вам сокращать численность занятых сотрудников в условиях действия внешнего санкционного давления на территории Липецкой области? ',
-          options:[
+        downsizing: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'downsizing',
+          question: '24. Пришлось ли Вам сокращать численность занятых сотрудников в условиях действия внешнего санкционного давления на территории Липецкой области? ',
+          options: [
             "Штат сотрудников сохранен в полном объеме",
             "Штат сокращен менее чем на 10%  от численности сотрудников",
             "Штат сокращен на 10-50%  от численности сотрудников",
@@ -445,10 +478,12 @@ export default {
             "Работаю без наемных сотрудников",
           ]
         },
-        salaryСut:{
-          currentValue:'',
-          question:'25. Пришлось ли Вам сокращать заработную плату сотрудников в условиях действия внешнего санкционного давления на территории Липецкой области?',
-          options:[
+        salaryСut: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'salaryСut',
+          question: '25. Пришлось ли Вам сокращать заработную плату сотрудников в условиях действия внешнего санкционного давления на территории Липецкой области?',
+          options: [
             "Заработная плата  сотрудников сохранена в полном объеме",
             "Заработная плата сотрудников сокращена менее чем на 10%  от заработка",
             "Заработная плата сотрудников сокращена на 10-50%  от заработка",
@@ -456,19 +491,23 @@ export default {
             "Работаю без наемных сотрудников"
           ]
         },
-        typesOfLosses:{
-          currentValue:'',
-          question:'26. К каким видам потерь привели Ваш бизнес ограничительные меры, установленные на территории Липецкой области?',
-          options:[
+        typesOfLosses: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'typesOfLosses',
+          question: '26. К каким видам потерь привели Ваш бизнес ограничительные меры, установленные на территории Липецкой области?',
+          options: [
             "Потери финансового характера",
             "Потери от простоев",
             "Кадровые потери"
           ]
         },
-        sourcesOfInformation:{
-          currentValue:[],
-          question:'27. Из каких источников Вы получаете информацию о мерах поддержки для бизнеса в Липецкой области?',
-          options:[
+        sourcesOfInformation: {
+          currentValue: [],
+          type: 'checkbox',
+          currentQuest: 'sourcesOfInformation',
+          question: '27. Из каких источников Вы получаете информацию о мерах поддержки для бизнеса в Липецкой области?',
+          options: [
             "Центр «Мой бизнес»",
             "МФЦ",
             "Бизнес - объединения (Деловая Россия, Липецкая торгово-промышленная палата, Российский союз промышленных предпринимателей, Опора России и др.)",
@@ -482,98 +521,139 @@ export default {
             "Другое"
           ]
         },
-        appealMyBusiness:{
-          currentValue:'',
-          question:'28. Обращались ли Вы за услугами в Центр «Мой бизнес»?',
-          options:[
+        appealMyBusiness: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'appealMyBusiness',
+          question: '28. Обращались ли Вы за услугами в Центр «Мой бизнес»?',
+          options: [
             "Да",
             "Нет"
           ]
         },
-        memberOfBusinessAssociation:{
-          currentValue:'',
-          question:'29. Являетесь ли Вы членом общественного бизнес-объединения?',
-          options:[
+        memberOfBusinessAssociation: {
+          currentValue: '',
+          type: 'radio',
+          currentQuest: 'memberOfBusinessAssociation',
+          question: '29. Являетесь ли Вы членом общественного бизнес-объединения?',
+          options: [
             "Да",
             "Нет"
           ]
         },
-        ownOpinionAboutSupport:{
-          currentValue:'',
-          question:'30. Какие, на Ваш взгляд, меры поддержки могут повлиять на развитие бизнеса?'
+        ownOpinionAboutSupport: {
+          currentValue: '',
+          type: 'text-input',
+          currentQuest: 'ownOpinionAboutSupport',
+          question: '30. Какие, на Ваш взгляд, меры поддержки могут повлиять на развитие бизнеса?'
         }
       },
     }
   },
-  methods:{
-    checkboxHandler(options,currentQuest){
+  methods: {
+    checkboxHandler(options, currentQuest) {
       this.questions[currentQuest].currentValue = options
     },
-    makeQuestionnaire(){
+    makeQuestionnaire() {
       let keys = Object.keys(this.questions)
-      let values = keys.map(k=>{
-        return {[k] : this.questions[k].currentValue}
+      let values = keys.map(k => {
+        return {[k]: this.questions[k].currentValue}
       })
       this.result = values
       console.log(JSON.parse(JSON.stringify(this.result)))
     },
+    paginateBlock() {
+        this.currentBlock++
+        this.$refs.formStart.scrollIntoView()
+    }
   },
+  computed: {
+    getData() {
+      return this.questions
+    },
+    getPartOfQuestions() {
+      return (start, end) => {
+        let partOfKeys = Object.keys(this.getData)
+        let allData = partOfKeys.map(key => this.getData[key])
+        return allData.slice(start - 1, end)
+      }
+    }
+  }
 }
 </script>
 
 <style lang="scss" src="./assets/styles/global.scss"></style>
-<style lang = "scss">
-  .container{
-    max-width: 73rem;
-    margin: 0 auto;
-    .head_info{
-      text-align: center;
-      font-size: 1rem;
-      line-height: 1.5rem;
-      margin-bottom: 2rem;
-      &:last-of-type{
-        margin-bottom: 3rem;
-      }
-    }
-    h1{
-      font-size: 2rem;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    form{
-      h2{
-        font-size: 1.5rem;
-        font-weight: bold;
-        text-align: center;
-        margin:0 auto 2rem auto;
-        text-transform: uppercase;
-        width: 60%;
-        &.thanks{
-          margin-top: 3rem;
-        }
-      }
-    }
-    input[type=submit]{
-      padding: 1rem;
-      background-color:cornflowerblue;
-      border: none;
-      color:white;
+<style lang="scss">
+.container {
+  max-width: 73rem;
+  margin: 0 auto;
+
+  .head_info {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+
+    &:last-of-type {
       margin-bottom: 3rem;
     }
   }
-  @media (max-width: 73rem) {
-    .container{
-      margin: 0 0.5rem;
-      h1{
-        font-size:1.5rem
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  form {
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin: 0 auto 2rem auto;
+      text-transform: uppercase;
+      width: 60%;
+
+      &.thanks {
+        margin-top: 3rem;
       }
-      form h2{
-        width: 100%;
-        font-size: 1rem;
-      }
-     }
+    }
+  }
+
+  .paginateButton, input[type=submit] {
+    padding: 1rem;
+    background-color: cornflowerblue;
+    border: none;
+    color: white;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 73rem) {
+  .container {
+    margin: 0 0.5rem;
+
+    h1 {
+      font-size: 1.5rem
     }
 
+    form h2 {
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+}
+.list-item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+.list-enter-active, .list-leave-active {
+  transition: all 0.5s;
+}
+.list-enter, .list-leave-to /* .list-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+  transform: translateX(2rem);
+}
 
 </style>

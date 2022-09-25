@@ -4,14 +4,14 @@
         <p class="quest__clarification">(пожалуйста, укажите один вариант ответа)</p>
         <div v-if="htmlFormat">
             <div  class="quest__input_container" v-for="option in quest.options" :key="option">
-                <input type="radio" :id="option" required
+                <input type="radio" :id="option" :required="required"
                        :name="currentQuest" @click="$emit('update:modelValue', option)">
                 <label v-html="option" class="label" :for="currentQuest"></label>
             </div>
         </div>
         <div v-else>
             <div  class="quest__input_container" v-for="option in quest.options" :key="option">
-                <input type="radio" :id="option" required
+                <input type="radio" :id="option" :required="required"
                        :name="currentQuest" @click="$emit('update:modelValue', option)">
                 <label class="label" :for="currentQuest">{{option}}</label>
             </div>
@@ -24,6 +24,11 @@
   export default {
     name: "q-radio",
     props: ['quest', 'modelValue','currentQuest','htmlFormat'],
+    data(){
+      return{
+        required:false
+      }
+    }
   }
 </script>
 

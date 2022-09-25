@@ -9,10 +9,10 @@
             <label class="label" :for="type">{{type}}</label>
             <div class = 'inputs-arrow'>
             <input type="radio"
+                   :required="required"
                    v-for="value in quest.values"
                    :key="value"
                    :id="type"
-                   required
                    :data-name = "value"
                    :name="type"
                    @click="dataHandler($event, type, value)">
@@ -26,9 +26,10 @@
   export default {
     props:['quest','currentQuest'],
     name: "q-table-radio",
-    date(){
+    data(){
       return{
-        answers: {}
+        answers: {},
+        required:false
       }
     },
     methods:{
@@ -95,7 +96,7 @@
             margin-right: 1rem;
             transition: all 0.3s;
             flex-shrink: 0;
-            border: 1px solid lightgrey;
+            border: 1px solid gray;
             &:hover{
                 cursor:pointer;
             }
