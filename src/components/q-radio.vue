@@ -26,7 +26,7 @@
     props: ['quest', 'modelValue','currentQuest','htmlFormat'],
     data(){
       return{
-        required:false
+        required:true
       }
     }
   }

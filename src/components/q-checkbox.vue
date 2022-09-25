@@ -22,7 +22,7 @@
     data(){
       return{
         selectedOptions:[],
-        required:false
+        required:true
       }
     },
     methods:{

@@ -15,7 +15,7 @@
     props: ['quest', 'modelValue'],
     data(){
       return{
-        required:false
+        required:true
       }
     }
   }

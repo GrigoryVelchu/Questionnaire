@@ -29,7 +29,7 @@
     data(){
       return{
         answers: {},
-        required:false
+        required:true
       }
     },
     methods:{
