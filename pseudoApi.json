@@ -1,0 +1,2067 @@
+{"api":{
+    "id": 1,
+    "active": true,
+    "author": null,
+    "closed": false,
+    "content": null,
+    "ends_at": "",
+    "external_image": null,
+    "title": "Общий заголовок всей анкеты",
+    "sort": 500,
+    "starts_at": "",
+    "votes": 0,
+    "polls": [
+      {
+        "allow_any": false,
+        "author": null,
+        "closed": false,
+        "content": null,
+        "ends_at": "",
+        "id": 101,
+        "max_check": 1,
+        "title": "На территории какого города (района) Липецкой области осуществляет свою деятельность Ваша организация или Вы?",
+        "starts_at": "",
+        "votes": 0,
+        "questionnaire_id": 1,
+        "options": [
+          {
+            "id": 101,
+            "name": "г. Липецк",
+            "sort": 1,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 102,
+            "name": "г. Елец",
+            "sort": 2,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 103,
+            "name": "Грязинский район",
+            "sort": 3,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 104,
+            "name": "Данковский район",
+            "sort": 4,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 105,
+            "name": "Добринский район",
+            "sort": 5,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 106,
+            "name": "Добровский район",
+            "sort": 6,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 107,
+            "name": "Долгоруковский район",
+            "sort": 7,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 108,
+            "name": "Елецкий район",
+            "sort": 8,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 109,
+            "name": "Задонский район",
+            "sort": 9,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 110,
+            "name": "Краснинский район",
+            "sort": 10,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 111,
+            "name": "Лебедянский район",
+            "sort": 11,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 112,
+            "name": "Лев-Толстовский район",
+            "sort": 12,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 113,
+            "name": "Липецкий район",
+            "sort": 13,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 114,
+            "name": "Становлянский район",
+            "sort": 14,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 115,
+            "name": "Тербунский район",
+            "sort": 15,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 116,
+            "name": "Усманский район",
+            "sort": 16,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 117,
+            "name": "Хлевенский район",
+            "sort": 17,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 118,
+            "name": "Чаплыгинский район",
+            "sort": 18,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 119,
+            "name": "Воловский район",
+            "sort": 19,
+            "votes_abs": 0,
+            "votes": 0
+          }
+        ]
+      },
+      {
+        "allow_any": false,
+        "author": null,
+        "closed": false,
+        "content": null,
+        "ends_at": "",
+        "id": 201,
+        "max_check": 1,
+        "title": "Укажите, являетесь ли Вы юридическим лицом или имеете статус индивидуального предпринимателя?",
+        "starts_at": "",
+        "type": "radio",
+        "votes": 0,
+        "questionnaire_id": 2,
+        "options": [
+          {
+            "id": 201,
+            "name": "Юридическое лицо",
+            "sort": 1,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 202,
+            "name": "Индивидуальный предприниматель",
+            "sort": 2,
+            "votes_abs": 0,
+            "votes": 0
+          }
+        ]
+      },
+      {
+        "allow_any": false,
+        "author": null,
+        "closed": false,
+        "content": null,
+        "ends_at": "",
+        "id": 301,
+        "max_check": 4,
+        "title": "Какую должность Вы занимаете в организации, которую Вы представляете?",
+        "starts_at": "",
+        "votes": 0,
+        "questionnaire_id": 3,
+        "options": [
+          {
+            "id": 301,
+            "name": "Собственник бизнеса (совладелец)",
+            "sort": 1,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 302,
+            "name": "Руководитель высшего звена (генеральный директор, заместитель генерального директора или иная аналогичная позиция)",
+            "sort": 2,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 303,
+            "name": "Руководитель среднего звена (руководитель управления / подразделения / отдела)",
+            "sort": 3,
+            "votes_abs": 0,
+            "votes": 0
+          },
+          {
+            "id": 304,
+            "name": "Не руководящий сотрудник",
+            "sort": 4,
+            "votes_abs": 0,
+            "votes": 0
+          }
+        ]
+      },
+      {
+        "allow_any": true,
+        "author": null,
+        "closed": false,
+        "content": null,
+        "ends_at": "",
+        "max_check": 1,
+        "id": 401,
+        "title": "Какие, на Ваш взгляд, меры поддержки могут повлиять на развитие бизнеса?",
+        "starts_at": "",
+        "votes": 0,
+        "questionnaire_id": 4,
+        "options": []
+      }
+    ],
+    "children": [
+      {
+        "id": 2000,
+        "active": true,
+        "author": null,
+        "closed": false,
+        "content": null,
+        "ends_at": "",
+        "external_image": null,
+        "title": "Оцените уровень конкуренции в представленных сферах на территории Липецкой области?",
+        "sort": 500,
+        "starts_at": "",
+        "votes": 0,
+        "polls": [
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1001,
+            "max_check": 1,
+            "title": "Дошкольное образование",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1001,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1002,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1003,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1004,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1005,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1007,
+            "max_check": 1,
+            "title": "Общее образование",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1007,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1008,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1009,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1010,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1011,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1013,
+            "max_check": 1,
+            "title": "Cреднее профессиональное образование",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1013,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1014,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1015,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1016,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1017,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1019,
+            "max_check": 1,
+            "title": "Дополнительное образования детей",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1019,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1020,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1021,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1022,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1023,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1025,
+            "max_check": 1,
+            "title": "Психолого-педагогическое сопровождение детей с ограниченными возможностями здоровья",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1025,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1026,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1027,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1028,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1029,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1031,
+            "max_check": 1,
+            "title": "Социальные услуги",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1031,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1032,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1033,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1034,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1035,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1037,
+            "max_check": 1,
+            "title": "Розничная торговля лекарственными препаратами, медицинскими изделиями и сопутствующими товарами (аптеки)",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1037,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1038,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1039,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1040,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1041,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1043,
+            "max_check": 1,
+            "title": "Медицинские услуги",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1043,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1044,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1045,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1046,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1047,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1049,
+            "max_check": 1,
+            "title": "Ритуальные услуги",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1049,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1050,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1051,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1052,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1053,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1055,
+            "max_check": 1,
+            "title": "Лабораторные исследования для выдачи ветеринарных сопроводительных документов",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1055,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1056,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1057,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1058,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1059,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1061,
+            "max_check": 1,
+            "title": "Ремонт автотранспортных средств",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1061,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1062,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1063,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1064,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1065,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1067,
+            "max_check": 1,
+            "title": "Внутренний туризм",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1067,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1068,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1069,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1070,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1071,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1073,
+            "max_check": 1,
+            "title": "Племенное животноводство",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1073,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1074,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1075,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1076,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1077,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1079,
+            "max_check": 1,
+            "title": "Семеноводство",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1079,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1080,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1081,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1082,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1083,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1085,
+            "max_check": 1,
+            "title": "Жилищное строительство",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1085,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1086,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1087,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1088,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1089,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1091,
+            "max_check": 1,
+            "title": "Строительство объектов капитального строительства, за исключением жилищного и дорожного строительства",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1091,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1092,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1093,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1094,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1095,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1097,
+            "max_check": 1,
+            "title": "Дорожная деятельность (за исключением проектирования)",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1097,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1098,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1099,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1100,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1101,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1103,
+            "max_check": 1,
+            "title": "Архитектурно-строительное проектирование",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1103,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1104,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1105,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1106,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1107,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1109,
+            "max_check": 1,
+            "title": "Кадастровые и землеустроительные работы",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1109,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1110,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1111,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1112,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1113,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1115,
+            "max_check": 1,
+            "title": "Добыча общераспространенных полезных ископаемых",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1115,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1116,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1117,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1118,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1119,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1121,
+            "max_check": 1,
+            "title": "Теплоснабжение (производство тепловой энергии)",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1121,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1122,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1123,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1124,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1125,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1127,
+            "max_check": 1,
+            "title": "Сбор и транспортирование твердых коммунальных отходов",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1127,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1128,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1129,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1130,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1131,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1133,
+            "max_check": 1,
+            "title": "Благоустройство городской среды",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1133,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1134,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1135,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1136,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1137,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1139,
+            "max_check": 1,
+            "title": "Содержание и текущий ремонт общего имущества в многоквартирном доме",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1139,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1140,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1141,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1142,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1143,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1145,
+            "max_check": 1,
+            "title": "Купля-продажа электрической энергии (мощности)",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1145,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1146,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1147,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1148,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1149,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1151,
+            "max_check": 1,
+            "title": "Производство электрической энергии (мощности)",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1151,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1152,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1153,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1154,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1155,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1157,
+            "max_check": 1,
+            "title": "Нефтепродукты (бензин, дизельное топливо)",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1157,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1158,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1159,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1160,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1161,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1163,
+            "max_check": 1,
+            "title": "Перевозка пассажиров автомобильным транспортом по муниципальным маршрутам",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1163,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1164,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1165,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1166,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1167,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1169,
+            "max_check": 1,
+            "title": "Перевозка пассажиров автомобильным транспортом по межмуниципальным маршрутам",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1169,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1170,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1171,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1172,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1173,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1175,
+            "max_check": 1,
+            "title": "Перевозка пассажиров и багажа легковым такси",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1175,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1176,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1177,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1178,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1179,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1181,
+            "max_check": 1,
+            "title": "Легкая промышленность",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1181,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1182,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1183,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1184,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1185,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1187,
+            "max_check": 1,
+            "title": "Производство кирпича",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1187,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1188,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1189,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1190,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1191,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1193,
+            "max_check": 1,
+            "title": "Производство бетона",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1193,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1194,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1195,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1196,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1197,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1199,
+            "max_check": 1,
+            "title": "Услуги связи, в том числе услуг по предоставлению доступа к сети Интернет",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1199,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1200,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1201,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1202,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1203,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1205,
+            "max_check": 1,
+            "title": "Реализация сельскохозяйственной продукции",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1205,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1206,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1207,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1208,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1209,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          },
+          {
+            "allow_any": false,
+            "author": null,
+            "closed": false,
+            "content": null,
+            "ends_at": "",
+            "id": 1211,
+            "max_check": 1,
+            "title": "Финансовые услуги",
+            "starts_at": "",
+            "votes": 0,
+            "questionnaire_id": 101,
+            "options": [
+              {
+                "id": 1211,
+                "name": "Нет конкуренции",
+                "sort": 1,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1212,
+                "name": "Слабая конкуренция",
+                "sort": 2,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1213,
+                "name": "Умеренная конкуренция",
+                "sort": 3,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1214,
+                "name": "Высокая конкуренция",
+                "sort": 4,
+                "votes_abs": 0,
+                "votes": 0
+              },
+              {
+                "id": 1215,
+                "name": "Затрудняюсь ответить",
+                "sort": 5,
+                "votes_abs": 0,
+                "votes": 0
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }}

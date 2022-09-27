@@ -20,8 +20,11 @@
       Заранее благодарим за участие в исследовании!
     </p>
     <h1>АНКЕТА<br/>для предпринимателя</h1>
-    <transition-group name="list" tag="div">
-    <form key="1" ref="formStart" class="list-item" @submit.prevent="paginateBlock" v-if="currentBlock===1">
+
+    <re-quest-block v-if="isDataFetchedFromApi" :block-title="fetchedData.title" :data="fetchedData.polls" :children="fetchedData.children"></re-quest-block>
+
+    <transition-group name="list" tag="div" v-else>
+    <form  key="1" ref="formStart" class="list-item" @submit.prevent="paginateBlock" v-if="currentBlock===1">
       <quest-block
           :blockTitle="'I. ХАРАКТЕРИСТИКА БИЗНЕСА'"
           :partOfQuest="getPartOfQuestions(1,9)"
@@ -51,16 +54,20 @@
 
 <script>
 import QuestBlock from "@/components/quest-block";
+import ReQuestBlock from "@/components/new-logic-components/re-quest-block"
 
 export default {
   name: 'App',
   components: {
     QuestBlock,
+    ReQuestBlock
   },
   data() {
     return {
       result: [],
       currentBlock: 1,
+      isDataFetchedFromApi:false,
+      fetchedData:"",
       questions: {
         regions: {
           currentValue: '',
@@ -565,6 +572,13 @@ export default {
     paginateBlock() {
         this.currentBlock++
         this.$refs.formStart.scrollIntoView()
+    },
+    async fetchData(){
+      const res = await fetch('http://localhost:4000/api')
+      if(res.ok){
+        this.fetchedData = await res.json()
+        this.isDataFetchedFromApi =true;
+      }
     }
   },
   computed: {
@@ -578,6 +592,9 @@ export default {
         return allData.slice(start - 1, end)
       }
     }
+  },
+  created(){
+    this.fetchData()
   }
 }
 </script>
